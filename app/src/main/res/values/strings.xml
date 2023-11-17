@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">BMS_CCU</string>
+    <string name="hamburger_desc">Opens Navigation Drawer</string>
+    <string name="zones">ZONES</string>
+    <string name="systems">SYSTEMS</string>
+    <string name="buildings">BUILDINGS</string>
+    <string name="alerts">ALERTS</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string-array name="color_pallete">
+        <item>faded red</item>
+        <item>faded blue</item>
+        <item>faded green</item>
+        <item>faded yellow</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
