@@ -1,6 +1,7 @@
-package com.example.bms_ccu.data.network
+package com.example.bms_ccu.data.network.apis
 
 import com.example.bms_ccu.BuildConfig
+import com.example.bms_ccu.data.network.responses.CityWeather
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET

@@ -1,19 +1,20 @@
-package com.example.bms_ccu
+package com.example.bms_ccu.ui
 
-import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.View
-import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.os.BuildCompat
 import androidx.core.view.GravityCompat
-import androidx.core.view.get
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.viewpager2.widget.ViewPager2
-import com.example.bms_ccu.adapters.ViewPagerAdapter
+import com.example.bms_ccu.R
+import com.example.bms_ccu.data.network.apis.WeatherRetrofitApi
+import com.example.bms_ccu.ui.adapters.ViewPagerAdapter
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 
@@ -46,6 +47,10 @@ class MainActivity : AppCompatActivity() {
             tab, position ->
             tab.text = getString(tabNames[position])
         }.attach()
+        Log.d("USER_TEST","Logging Incoming")
+        GlobalScope.launch {
+            Log.d("USER_TEST", "${ WeatherRetrofitApi.invoke().fetchWeatherDetails(24.75, 84.35) }")
+        }
     }
 
     fun toggleDrawer(view: View) {
