@@ -1,4 +1,4 @@
-package com.example.bms_ccu.fragments.tabbedFragments
+package com.example.bms_ccu.ui.fragments.tabbedFragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

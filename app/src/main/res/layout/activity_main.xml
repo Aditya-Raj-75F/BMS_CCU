@@ -5,7 +5,7 @@
     android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity" >
+    tools:context=".ui.MainActivity" >
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
@@ -94,7 +94,7 @@
 
         <com.google.android.material.navigation.NavigationView
         android:id="@+id/sideMenuNavigation"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
             android:layout_marginTop="?attr/actionBarSize"
