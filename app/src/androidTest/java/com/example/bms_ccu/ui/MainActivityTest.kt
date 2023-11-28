@@ -13,6 +13,7 @@ import com.example.bms_ccu.R
 import org.hamcrest.CoreMatchers.allOf
 import org.hamcrest.CoreMatchers.not
 import org.junit.jupiter.api.BeforeEach
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Nested
 import org.junit.jupiter.api.Test
@@ -64,12 +65,6 @@ class MainActivityTest {
                     withText("ALERTS")
                 ))
             ))
-        }
-
-        @Test
-        @DisplayName("Checking Visibility of Setting button")
-        fun test_isSettingButtonPresent() {
-            onView(withId(R.id.settingButton)).check(matches(isDisplayed()))
         }
     }
 

@@ -56,41 +56,40 @@
                 app:tabTextAppearance="@style/CustomTabTextAppearance"
                 app:tabTextColor="@color/white">
 
-                <com.google.android.material.tabs.TabItem
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/zones" />
-
-                <com.google.android.material.tabs.TabItem
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/systems" />
-
-                <com.google.android.material.tabs.TabItem
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/buildings" />
-
-                <com.google.android.material.tabs.TabItem
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/alerts" />
             </com.google.android.material.tabs.TabLayout>
 
-            <ImageView
-                android:id="@+id/settingButton"
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/settingOrProfile"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:layout_marginEnd="16dp"
-                android:src="@drawable/setting_icon" />
+                android:layout_height="match_parent"
+                app:tabIndicatorColor="@color/reddish"
+                app:tabIndicatorFullWidth="true"
+                app:tabMode="fixed"
+                app:tabIconTint="@color/white"
+                android:backgroundTint="?attr/colorPrimary"
+                android:layout_gravity="right">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:icon="@drawable/setting_white"
+                    android:text=""
+                    />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:icon="@drawable/baseline_house_24"
+                    android:text=""/>
+
+            </com.google.android.material.tabs.TabLayout>
         </androidx.appcompat.widget.Toolbar>
     </RelativeLayout>
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="?attr/actionBarSize"></androidx.viewpager2.widget.ViewPager2>
+        android:layout_marginTop="?attr/actionBarSize"/>
 
         <com.google.android.material.navigation.NavigationView
         android:id="@+id/sideMenuNavigation"

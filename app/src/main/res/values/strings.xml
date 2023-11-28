@@ -15,4 +15,15 @@
     </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sunrise_label">Sunrise</string>
+    <string name="sunset_label">Sunset</string>
+    <string name="floor_layout">FLOOR LAYOUT</string>
+    <string name="settings">SETTINGS</string>
+    <string name="tuners">TUNERS</string>
+    <string name="select_country">SELECT COUNTRY</string>
+    <string name="select_state">SELECT STATE</string>
+    <string name="select_city">SELECT CITY</string>
+    <string name="country_hint">India</string>
+    <string name="state_hint">Bihar</string>
+    <string name="city_hint">Patna</string>
 </resources>

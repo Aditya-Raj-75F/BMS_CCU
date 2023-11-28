@@ -12,4 +12,6 @@ plugins {
     // Tests
     id("de.mannodermaus.android-junit5") version "1.10.0.0" apply false
     id("jacoco")
+
+    id("org.jetbrains.kotlin.kapt") version "1.9.21"
 }

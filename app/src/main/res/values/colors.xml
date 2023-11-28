@@ -8,4 +8,8 @@
     <color name="faded_yellow">#F1EBB3</color>
     <color name="grey">#71747C</color>
     <color name="reddish">#B85E51</color>
+    <color name="weather_widget_color">#E55C45</color>
+    <color name="bright_cloud">#f4f4f4</color>
+    <color name="dark_cloud">#4b4b4b</color>
+    <color name="yellow">#FFD600</color>
 </resources>

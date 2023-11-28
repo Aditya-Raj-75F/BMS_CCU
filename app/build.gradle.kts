@@ -4,8 +4,12 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
 
+    // Plugin for ksp annotation processor
+    id("com.google.devtools.ksp")
+
     // UI testing with Junit5
     id("de.mannodermaus.android-junit5") version "1.10.0.0"
+    id("org.jetbrains.kotlin.kapt")
 }
 
 val configProperties = Properties()
@@ -21,6 +25,8 @@ android {
 
     buildFeatures {
         buildConfig = true
+        dataBinding = true
+        viewBinding = true
     }
 
     defaultConfig {
@@ -42,7 +48,8 @@ android {
             )
         }
         defaultConfig {
-            buildConfigField("String", "API_KEY", "${configProperties["OPEN_WEATHER_MAP_API_KEY"]}")
+            buildConfigField("String", "OPEN_WEATHER_MAP_API_KEY", "${configProperties["OPEN_WEATHER_MAP_API_KEY"]}")
+            buildConfigField("String", "COUNTRY_STATE_CITY_API_KEY", "${configProperties["COUNTRY_STATE_CITY_API_KEY"]}")
         }
     }
     compileOptions {
@@ -70,6 +77,19 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
 
+    // MVVM and Live Data and Fragments
+    implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")
+    implementation("androidx.fragment:fragment-ktx:1.6.2")
+    implementation("androidx.activity:activity-ktx:1.8.0")
+
+    // Room Database
+    implementation("androidx.room:room-ktx:2.6.0")
+    implementation("androidx.room:room-runtime:2.6.0")
+    implementation("androidx.test.espresso:espresso-contrib:3.5.1")
+    ksp("androidx.room:room-compiler:2.6.0")
+
     // API Calls
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
@@ -90,6 +110,9 @@ dependencies {
 
         // Junit5
     androidTestImplementation("org.junit.jupiter:junit-jupiter-api:5.10.0")
+
+        // Mockito
+    androidTestImplementation("org.mockito:mockito-core:5.7.0")
 }
 
 tasks.withType<Test> {
